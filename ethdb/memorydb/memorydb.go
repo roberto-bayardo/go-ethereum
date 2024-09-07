@@ -35,6 +35,8 @@ var (
 	// errMemorydbNotFound is returned if a key is requested that is not found in
 	// the provided memory database.
 	errMemorydbNotFound = errors.New("not found")
+
+	_ ethdb.KeyValueStore = &Database{}
 )
 
 // Database is an ephemeral key-value store. Apart from basic data storage

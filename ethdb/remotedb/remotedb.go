@@ -27,6 +27,8 @@ import (
 	"github.com/ethereum/go-ethereum/rpc"
 )
 
+var _ ethdb.Database = &Database{}
+
 // Database is a key-value lookup for a remote database via debug_dbGet.
 type Database struct {
 	remote *rpc.Client

@@ -51,6 +51,8 @@ const (
 	degradationWarnInterval = time.Minute
 )
 
+var _ ethdb.KeyValueStore = &Database{}
+
 // Database is a persistent key-value store based on the pebble storage engine.
 // Apart from basic data storage functionality it also supports batch writes and
 // iterating over the keyspace in binary-alphabetical order.

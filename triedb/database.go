@@ -54,6 +54,8 @@ var VerkleDefaults = &Config{
 	PathDB:    pathdb.Defaults,
 }
 
+var _ database.Database = &Database{}
+
 // backend defines the methods needed to access/update trie nodes in different
 // state scheme.
 type backend interface {

@@ -34,6 +34,8 @@ import (
 	"github.com/olekukonko/tablewriter"
 )
 
+var _ ethdb.Database = &freezerdb{}
+
 // freezerdb is a database wrapper that enables ancient chain segment freezing.
 type freezerdb struct {
 	ethdb.KeyValueStore
